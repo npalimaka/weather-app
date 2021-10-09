@@ -55,6 +55,7 @@ input {
 button{
     width: 300px;
     height: 70px;
+    cursor: pointer;
     background: #3b4a6b;
     color: #fff;
     font-size: 26px;

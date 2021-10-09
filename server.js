@@ -17,10 +17,12 @@ app.use(cors());
 app.use(express.static('website'));
 
 // Setup Server
-app.get('/recent', (req, res) => res.send(projectData))
+app.get('/recent', (req, res) => {
+    res.send(projectData);
+    console.log('GET request called.')
+})
 
 app.post('/add', (req, res) => {
-    console.log(req.body);
     const incomingData = req.body;
     const newEntry = {
         date: incomingData.date,
@@ -28,10 +30,10 @@ app.post('/add', (req, res) => {
         userResponse: incomingData.userResponse
     };
     projectData = {...newEntry};
-    console.log(`post send with data ${req.body}`, projectData);
+    console.log('POST request called with data: ', projectData);
 });
 
-const port = 3000;
+const port = 8080;
 function listening() {
     console.log(`Listening on port: ${port}`)
 }
