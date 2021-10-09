@@ -48,6 +48,7 @@ body{
 }
 
 .feel {
+    padding-top: 12px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -63,7 +64,8 @@ label{
     font-size: 27px;
 }
 
-input{
+input {
+    padding-left: 5px;
     display:block;
     height: 60px;
     width: 320px;
@@ -90,6 +92,7 @@ h1 {
 }
 
 textarea{
+    padding-left: 5px;
     background:#22b2da;
     /*color: #f0d43a;*/
     font-size: 20px;
@@ -103,19 +106,22 @@ button:focus {
     outline: none;
 }
 /* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
+::placeholder { /* Firefox, Chrome, Opera */
+    /*padding-left: 8px;*/
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
 
 } 
   
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    /*padding-left: 8px;*/
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
 
 } 
   
-::-ms-input-placeholder { /* Microsoft Edge */ 
+::-ms-input-placeholder { /* Microsoft Edge */
+    /*padding-left: 8px;*/
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
 
