@@ -5,7 +5,7 @@ body{
 
 #app{
     display: grid;
-    grid-template-rows: 150px 300px 300px;
+    grid-template-rows: 150px 300px 200px;
     height:100vh;
     background: #0839add6;
     color: #fff;
@@ -15,34 +15,11 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
-
-}
-
 .entry{
     background: rgba(59, 74, 107, .4);
 
 }
 
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
 .title{
     text-align: center;
 }
@@ -94,7 +71,6 @@ h1 {
 textarea{
     padding-left: 5px;
     background:#22b2da;
-    /*color: #f0d43a;*/
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
@@ -107,21 +83,18 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */
-    /*padding-left: 8px;*/
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    /*padding-left: 8px;*/
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */
-    /*padding-left: 8px;*/
     color: #f0d43a;
     font-family: 'Oswald', sans-serif;
 

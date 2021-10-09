@@ -20,6 +20,7 @@ app.use(express.static('website'));
 app.get('/recent', (req, res) => res.send(projectData))
 
 app.post('/add', (req, res) => {
+    console.log(req.body);
     const incomingData = req.body;
     const newEntry = {
         date: incomingData.date,
@@ -27,7 +28,7 @@ app.post('/add', (req, res) => {
         userResponse: incomingData.userResponse
     };
     projectData = {...newEntry};
-    console.log(`post send with data ${req.body}`);
+    console.log(`post send with data ${req.body}`, projectData);
 });
 
 const port = 3000;
