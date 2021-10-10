@@ -4,7 +4,7 @@ const apiKey = 'cb2e281a2c64a17d1fa3fe2d3a36f8ef';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
+let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
 
 document.getElementById('generate').addEventListener('click', generateData);
 
@@ -36,7 +36,7 @@ function generateData() {
 
 const getWeather = async (baseURL, zip, key) => {
 
-    const res = await fetch(`${baseURL}${zip}&appId=${key}`)
+    const res = await fetch(`${baseURL}${zip}&units=imperial&appId=${key}`)
     try {
         const data = await res.json();
         return checkResponse(data);
