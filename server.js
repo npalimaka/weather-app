@@ -29,7 +29,9 @@ app.post('/add', (req, res) => {
         temperature: incomingData.temperature,
         userResponse: incomingData.userResponse
     };
-    projectData = {...newEntry};
+    projectData.date = newEntry.date;
+    projectData.temperature = newEntry.temperature;
+    projectData.userResponse = newEntry.userResponse;
     console.log('POST request called with data: ', projectData);
 });
 
