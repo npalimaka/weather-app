@@ -47,7 +47,6 @@ const getWeather = async (baseURL, zip, key) => {
 }
 
 const postData = async (url = '', data = {}) => {
-    const location = window.location.hostname;
     const settings = {
         method: 'POST',
         headers: {
@@ -57,7 +56,7 @@ const postData = async (url = '', data = {}) => {
         body: JSON.stringify(data)
     };
     try {
-        const res = await fetch(`http://${location}:8080/add`, settings);
+        const res = await fetch(`${url}`, settings);
         return await res.json();
     } catch (error) {
         const message = error ? error : '';
@@ -66,7 +65,7 @@ const postData = async (url = '', data = {}) => {
 }
 
 const getData = async () => {
-    const req = await fetch('recent');
+    const req = await fetch('/recent');
     try {
         const data = await req.json();
         document.getElementById('date').innerHTML = `Date: ${data.date}`;
